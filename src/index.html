@@ -1,17 +1,33 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
+
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Cifra de César</title>
     <link rel="stylesheet" href="style.css" />
+
   </head>
+
   <body>
-    <div id="root">
-      <h1>Eu e Eu</h1>
-    </div>
-  
-      <p>Digite seu texto:</p>
-      <input type=" text"/> 
+
+    <header>
+      
+      
+
+      <img src="images/eu_e_eu_logo.png">
+      
+      <h2>Decodificador baseado em cifra de césar</h2>
+
+      <hr>
+
+    </header>
+      
+    <main>
+
+      <textarea id="caixaEntrada" name="caixa_entrada">Sua Palavra...</textarea>
+      <textarea id="caixaSaida" name="caixa_saida"></textarea> 
       <br><br>
       <label for="chave">Chave</label>
         <select id="chave" name="chave">
@@ -24,14 +40,27 @@
             <option value="7">7</option>
             <option value="8">8</option>
             <option value="9">9</option>
+            <option value="10">10</option>
         </select>
       <br><br>
-      <button>Codificar</button> 
+      <button id="botãoCodificar" name="botão_c">Codificar</button> 
       <br><br>
-      <input type=" text"/>
-      <br><br>
-      <button>Descodificar</button>
+      <button id="botãoDecodificar" name=" botão_d">Decodificar</button>
+
+    </main>
+
+      <footer>
+
+        <p>I ee I - Todos os direitos Reservados - 2023</p>
+      
+        <img src="images/git_s.png" width="61" height="60">
+        <img src="images/insta_s.png" width="60" height="60">
+        <img src="images/linkedin_s.png" width="60" height="60">
+
+      </footer>
      
     <script src="index.js" type="module"></script>
+
   </body>
-</html>
+
+</html> 
