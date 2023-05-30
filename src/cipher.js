@@ -1,8 +1,8 @@
 const cipher = {
-  encode: function (palavra, deslocamento) { // Função que recebe como parâmetro a palavra e a chave de deslocamneto.
-    if (typeof palavra !== "string" || deslocamento === "") {  // Especifíca o tipo de um elemento
+  encode: function (deslocamento, palavra) { // Função que recebe como parâmetro a palavra e a chave de deslocamneto.
+    if (typeof palavra !== "string" || typeof deslocamento !== "number") {  // Especifíca o tipo de um elemento
       throw new TypeError (        // Mostra uma mensagem de erro
-        "Digite sua mensagem apenas com palavras e selecione uma opção de deslocamento"
+        "Digite sua mensagem apenas com letras maiúsculas e selecione um número como opção de deslocamento"
       );
     } else {  
       let palavraCodificada = ""; //Varável que guardará o texto codificado
@@ -13,7 +13,6 @@ const cipher = {
           if (caractereCodificado >= 65 && caractereCodificado <= 91) { // Verifica se está entre o código de A a Z em ASCII.
             caractere = String.fromCharCode(((caractereCodificado - 65 + deslocamento) % 26) + 65); // Cifrar e transformar em String
             palavraCodificada += caractere; // concatenação
-            // palavraCodificada = caractere; // Iguala a variável que guarda o resiltado.
           }
         }  
       }
@@ -21,10 +20,10 @@ const cipher = {
     }
   },
 
-  decode: function (palavra, deslocamento) { // Função que recebe como parâmetro a palavra e a chave de deslocamneto.
-    if (typeof palavra !== "string" || deslocamento === "") {  // Especifíca o tipo de um elemento
+  decode: function (deslocamento, palavra) { // Função que recebe como parâmetro a palavra e a chave de deslocamneto.
+    if (typeof palavra !== "string" || typeof deslocamento !== "number") {  // Especifíca o tipo de um elemento
       throw new TypeError (        // Mostra uma mensagem de erro
-        "Digite sua mensagem apenas com palavras e selecione uma opção de deslocamento"
+        "Digite sua mensagem apenas com letras maiúsculas e selecione um número como opção de deslocamento"
       );
     } else {  
       let palavraDecodificada = ""; //Varável que guardará o texto codificado
@@ -33,10 +32,9 @@ const cipher = {
         if (caractere.match(/[A-Z]/i)) { //Expressão regular que transforma? ou verifica? em/se é letra maiúscula.
           const caractereCodificado = palavra.charCodeAt(i); // Transformar em códico ASCIi
           if (caractereCodificado >= 65 && caractereCodificado <= 91) { // Verifica se está entre o código de A a Z em ASCII.
-            caractere = String.fromCharCode(((caractereCodificado - 65 - deslocamento) % 26) + 65); // Decifrar e transformar em String
-            palavraDecodificada += caractere;
-            //palavraDecodificada = caractere; // Iguala a variável que guarda o resiltado.
-          }
+            caractere = String.fromCharCode(((caractereCodificado - 91 - deslocamento) % 26) + 91); // Decifrar e transformar em String
+            palavraDecodificada += caractere; // Concatenação
+          } 
         }   
       }
       return palavraDecodificada; // Retorna o resultado

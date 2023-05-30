@@ -11,9 +11,9 @@ const caixa_saida = document.getElementById('caixaSaida');
 // Botão Codificar
 
 botão_codificar.addEventListener('click', function () {
-  const palavra = caixa_entrada.value
+  const palavra = caixa_entrada.value;
   const deslocamento = parseInt(chave_deslocamento.value);
-  const textoCodificado = cipher.encode (palavra, deslocamento);
+  const textoCodificado = cipher.encode (deslocamento, palavra);
   caixa_saida.value = textoCodificado;
 }
 );
@@ -21,12 +21,12 @@ botão_codificar.addEventListener('click', function () {
 // Botão Decodificar
 
 botão_decodificar.addEventListener('click', function () {
-  const palavra = caixa_entrada.value
+  const palavra = caixa_entrada.value;
   const deslocamento = parseInt(chave_deslocamento.value);
-  const textoDecodificado = cipher.decode (palavra, deslocamento);
+  const textoDecodificado = cipher.decode (deslocamento, palavra);
   caixa_saida.value = textoDecodificado;
 }
 );
 
 
-// console.log(cipher);
+
