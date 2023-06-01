@@ -1,0 +1,69 @@
+html, body {
+
+    width: 100%;
+    height: 100%;
+    background-color: #0E1C10;
+  }
+
+
+
+  main {
+    width: 100%;
+    height: 100%;
+
+  }
+
+p {
+    color: #CA8E99
+}
+
+h2, hr {
+    color: #B1183D;
+}
+
+Rectangle 14 {
+position: absolute;
+width: 1440px;
+height: 271px;
+left: 0px;
+top: 5px;
+
+background: #B1183D;
+}
+
+
+
+#caixaEntrada {
+    position: absolute;
+    width: 468px;
+    height: 439px;
+    left: 252px;
+    top: 322px;
+    
+    background: #E9FFF2;
+}
+
+
+#caixaSaida {
+
+position: absolute;
+width: 466px;
+height: 439px;
+left: 751px;
+top: 322px;
+
+background: #E9FFF2;
+
+}
+
+
+#conteiner {
+    width: 1140;
+    height: 271;
+    background-color: #B1183D;
+
+}
+
+.clip  {
+    clip-path: polygon(0% 271%, 271% 1140%, 1140% 271%, 271% 0%);
+}
