@@ -3,7 +3,7 @@
 ## Índice
 
 * [1. I &&n I](#1-i-&&-i)
-* [2. Sobre o projeto Cifra de César](#2-sobre-o-projeto-cifra de cásar)
+* [2. Sobre o projeto Cifra de César](#2-sobre-o-projeto-cifra-de-césar)
 * [3. Objetivos](#3-objetivos)
 * [4. Processo de criação](#5-processo-de-criação)
 * [5. Desafios e aprendizados](#5-desafios-e-aprendizados)
